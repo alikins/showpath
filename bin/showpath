@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+
+
+
+showpath-rvm
+
+showpath-gem
+
+showpath-java
+
+showpath-python-shell
+showpath-python
+showpath-bash

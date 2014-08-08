@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "rvm info"
+rvm info
+
+echo "gemsets info"
+rvm gemset list_all
