@@ -15,6 +15,12 @@ echo "python2: ${PYTHON2_BIN}"
 PYTHON3_BIN=`which python3`
 echo "python3: ${PYTHON3_BIN}"
 
+PYTHON3_BIN_PREFIX=`python3-config --prefix`
+echo "python3-config --prefix: ${PYTHON3_BIN_PREFIX}"
+
+PYTHON3_BIN_INCLUDES=`python3-config --includes`
+echo "python3-config --includes: ${PYTHON3_BIN_INCLUDES}"
+
 PIP_EXEC=`which pip`
 echo "pip exec: ${PIP_EXEC}"
 

@@ -6,7 +6,7 @@ import sys
 import site
 import os
 
-print "sys.argv:", sys.argv
+print("sys.argv: %s" % sys.argv)
 
 print("env vars")
 print("PATH: %s" % os.environ.get('PATH'))
@@ -33,7 +33,7 @@ print("site.getsitepackages(): \n\t%s" % '\n\t'.join(site.getsitepackages()))
 
 try:
     import sitecustomize
-except ImportError, e:
+except ImportError as e:
     print(e)
     sys.exit()
 
