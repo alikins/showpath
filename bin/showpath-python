@@ -5,6 +5,7 @@
 import sys
 import site
 import os
+import glob
 
 print("sys.argv: %s" % sys.argv)
 
@@ -30,6 +31,14 @@ print("site.PREFIXES: %s" % site.PREFIXES)
 print("site.USER_SITE: %s" % site.USER_SITE)
 print("site.USER_BASE: %s" % site.USER_BASE)
 print("site.getsitepackages(): \n\t%s" % '\n\t'.join(site.getsitepackages()))
+
+print("")
+print(".pth files found in sys.path dirs")
+for sys_path in sys.path:
+    pth_files = glob.glob(os.path.join(sys_path, '*.pth'))
+    if pth_files:
+        for pth in pth_files:
+            print(pth)
 
 try:
     import sitecustomize
